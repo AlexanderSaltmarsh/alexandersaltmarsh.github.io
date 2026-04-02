@@ -41,3 +41,13 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
+.profile-pic {
+    width: 225px;
+    height: 300px;          /* 4:3 ratio (300 / 4 * 3 = 225) */
+    object-fit: cover;      /* crops image nicely */
+    border-radius: 20px;    /* rounded rectangle (NOT circle) */
+    display: block;
+    margin: 1rem auto;
+    border: 3px solid #333;
+}
