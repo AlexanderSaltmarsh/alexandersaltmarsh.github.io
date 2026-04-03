@@ -1,21 +1,52 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+    font-size: 18px;
+
     margin: 0;
     background: #f5f5f5;
-    color: #333;
+    color: #222;
 }
 
+
+
 header {
-    background: #111;
+    background: #e26608;
     color: white;
-    padding: 2rem;
+    padding: .1rem;
     text-align: center;
 }
 
 section {
-    padding: 2rem;
-    max-width: 800px;
+    /* 1rem for Top/Bottom, 2rem for Left/Right */
+    padding: .75rem 2rem; 
+    max-width: 1000px;
     margin: auto;
+}
+section h1, section h2 {
+    text-align: center;
+    margin-bottom: 0.75rem; /* This pulls the paragraph up toward the heading */
+    margin-top: 1rem;    /* Optional: Controls the space above the heading */
+}
+
+section p {
+    text-align: center;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Links */
+section a {
+    color: #e26608; /* LinkedIn Blue */
+    text-decoration: none; /* Removes the default underline */
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+section a:hover {
+    color: #c05707; /* Darkens slightly when you hover over it */
+    text-decoration: underline; /* Adds the underline back on hover for clarity */
 }
 
 nav {
@@ -36,10 +67,20 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
+/* The Hover Effect: Keeps the Glow */
 nav a:hover {
-    text-decoration: underline;
+    color: #e26608;
+    text-shadow: 0 0 10px #e26608, 0 0 20px #e26608;
+    text-decoration: none;
+}
+
+/* The Active State: Solid Color, No Glow */
+nav a.active {
+    color: #e26608;
+    text-shadow: none; /* This ensures the glow is removed */
 }
 
 .profile-pic {
@@ -49,5 +90,154 @@ nav a:hover {
     border-radius: 20px;    /* rounded rectangle (NOT circle) */
     display: block;
     margin: 1rem auto;
-    border: 3px solid #333;
+    border: 3px solid #222;
+}
+
+.pdf-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.pdf-button {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid #111;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.2s ease;
+}
+
+.pdf-button:hover {
+    background: #e26608;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   CURRENT STUDIES PAGE LAYOUT
+   ========================================= */
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 50px 0;
+}
+
+/* --- Overrides for Studies Page --- */
+/* This prevents your global section centering from breaking the new layouts */
+.dynamic-section h2, 
+.domain-content h2, 
+.domain-block h3 {
+    text-align: left;
+}
+
+.study-log p, 
+.domain-block p {
+    text-align: left;
+    max-width: none;
+    margin: 0 0 1rem 0;
+}
+
+/* --- Subsection 1: Recent Interests --- */
+.study-log {
+    background: #fff;
+    border-left: 4px solid #111;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.study-log .date {
+    font-size: 0.85rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.study-log h3 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* --- Subsection 2: Long-Term Interests --- */
+.static-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* The Sticky Legend */
+.legend-nav {
+    flex: 0 0 200px;
+    position: sticky;
+    top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.legend-nav h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #111;
+    padding-bottom: 5px;
+}
+
+.legend-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legend-nav li {
+    margin-bottom: 10px;
+}
+
+.legend-nav a {
+    text-decoration: none;
+    color: #444;
+}
+
+.legend-nav a:hover {
+    color: #111;
+    text-decoration: underline;
+}
+
+/* The Domain Content */
+.domain-content {
+    flex: 1; 
+}
+
+.domain-content h2 {
+    margin-top: 0;
+}
+
+.domain-block {
+    margin-bottom: 40px;
+}
+
+.domain-block h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .static-section {
+        flex-direction: column;
+    }
+    
+    .legend-nav {
+        position: static;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }

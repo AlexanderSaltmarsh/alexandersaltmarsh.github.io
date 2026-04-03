@@ -3,44 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Current Studies</title>
+    <title>Current Studies | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
+<nav class="main-nav">
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="studies.html">Current Studies</a></li>
+        <li><a href="studies.html" class="active">Current Studies</a></li>
         <li><a href="hobbies.html">Hobbies</a></li>
     </ul>
 </nav>
 
-<section>
+<header>
     <h1>Current Studies</h1>
-
-    <h2>Aerospace Engineering at Stanford</h2>
-    <p>
-        I am currently pursuing graduate studies in aerospace engineering, focusing on structural analysis,
-        propulsion systems, and real-world engineering applications.
+    <p class="intro-text">
+        I enjoy looking into a variety of things. Some of these interface very well with my professional pursuits, others are just stuff that I find cool. I include both below. I wouldn't know half as much about engineering without my hobbies, and I wouldn't be half as good at my hobbies without my work.
     </p>
+</header>
 
-    <h2>Technical Interests</h2>
-    <ul>
-        <li>Structural mechanics and materials</li>
-        <li>Rocket propulsion systems</li>
-        <li>Thermal and fluid systems</li>
-        <li>Machine learning applications in engineering</li>
-    </ul>
+<main>
+    <section id="recent-interests" class="dynamic-section">
+        <h2>Recent Explorations</h2>
+        
+        <article class="study-log">
+            <span class="date">March 2026</span>
+            <h3>Auction Theory & Nash Equilibria</h3>
+            <p>
+                Lately, I've been diving deep into the economics of game theory, specifically analyzing broadband contract auctions. Setting up Cournot and Stackelberg models to find the Bayes-Nash equilibria has been a fascinating shift in problem-solving compared to traditional physical systems.
+            </p>
+        </article>
 
-    <h2>Current Work</h2>
-    <p>
-        My current work involves applying engineering fundamentals to practical design problems,
-        with an emphasis on building, testing, and iterating on physical systems.
-    </p>
+        <article class="study-log">
+            <span class="date">February 2026</span>
+            <h3>Actuators & Smart Structures</h3>
+            <p>
+                Currently exploring the theoretical limits of Shape Memory Alloys and Dielectric Elastomers. I've been using MATLAB and Python to model their behavior under different loads, looking at how to integrate these active materials into larger, responsive structural frameworks.
+            </p>
+        </article>
+    </section>
 
-</section>
+    <hr class="section-divider">
+
+    <section id="long-term-interests" class="static-section">
+        
+        <aside class="legend-nav">
+            <h3>Core Domains</h3>
+            <ul>
+                <li><a href="#aerodynamics">Aerodynamics</a></li>
+                <li><a href="#mechanics">Mechanics of Materials</a></li>
+                <li><a href="#computation">Computational Tools</a></li>
+            </ul>
+        </aside>
+
+        <div class="domain-content">
+            <h2 id="long-term-title">Established Areas of Study</h2>
+            
+            <div id="aerodynamics" class="domain-block">
+                <h3>Advanced Aerodynamics</h3>
+                <p>Focusing on foundational and applied theories governing flight and fluid behavior.</p>
+                <ul>
+                    <li>Thin Airfoil Theory</li>
+                    <li>Lifting-Line Theory</li>
+                    <li>Computational Fluid Dynamics (CFD)</li>
+                </ul>
+            </div>
+
+            <div id="mechanics" class="domain-block">
+                <h3>Mechanics of Materials</h3>
+                <p>
+                    Analyzing physical systems by calculating internal stress ($T$) and strain ($S$) 
+                    using Young's Modulus ($Y$) under varying temperature ($\theta$) conditions.
+                </p>
+                <ul>
+                    <li>Structural analysis of composite materials</li>
+                    <li>Failure theory and fatigue life</li>
+                    <li>Thermal expansion and stress modeling</li>
+                </ul>
+            </div>
+
+            <div id="computation" class="domain-block">
+                <h3>Computational Engineering</h3>
+                <p>Building, testing, and iterating on physical systems requires robust digital tools.</p>
+                <ul>
+                    <li>Simulation and mathematical modeling via MATLAB</li>
+                    <li>Scripting and data analysis using Python</li>
+                    <li>Version control and deployment (Git, Bash, GitHub Pages)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
 
 </body>
 </html>
