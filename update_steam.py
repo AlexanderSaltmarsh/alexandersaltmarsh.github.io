@@ -19,7 +19,6 @@ if "games" in data.get("response", {}):
         games.append({
             "name": game["name"],
             "image": f"https://cdn.akamai.steamstatic.com/steam/apps/{game['appid']}/header.jpg",
-            "playtime": round(game["playtime_2weeks"] / 60, 1) # hours in last 2 weeks
         })
 
 with open("recently_played.json", "w") as f:

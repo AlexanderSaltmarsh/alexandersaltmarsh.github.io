@@ -42,9 +42,10 @@
 
 </section>
 <div id="steam-activity">
-  <h3>Recently Playing</h3>
-  <div id="game-list" style="display: flex; gap: 15px;"></div>
-</div>
+        <h3>Recently Playing</h3>
+        <div id="game-list"></div>
+    </div>
+</section>
 
 <script>
   fetch('./recently_played.json')
@@ -54,8 +55,8 @@
       data.forEach(game => {
         container.innerHTML += `
           <div class="game-card">
-            <img src="${game.image}" alt="${game.name}" width="200">
-            <p><strong>${game.name}</strong><br>${game.playtime} hrs lately</p>
+            <img src="${game.image}" alt="${game.name}" width="200" style="border-radius: 8px;">
+            <p><strong>${game.name}</strong></p> 
           </div>
         `;
       });
