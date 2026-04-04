@@ -40,5 +40,28 @@
 
 </section>
 
+</section>
+<div id="steam-activity">
+  <h3>Recently Playing</h3>
+  <div id="game-list" style="display: flex; gap: 15px;"></div>
+</div>
+
+<script>
+  fetch('./recently_played.json')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('game-list');
+      data.forEach(game => {
+        container.innerHTML += `
+          <div class="game-card">
+            <img src="${game.image}" alt="${game.name}" width="200">
+            <p><strong>${game.name}</strong><br>${game.playtime} hrs lately</p>
+          </div>
+        `;
+      });
+    });
+</script>
+</section>
+
 </body>
 </html>
