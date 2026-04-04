@@ -4,6 +4,9 @@ on:
     - cron: '0 */12 * * *' # Runs every 12 hours
   workflow_dispatch: # Allows you to run it manually
 
+permissions:
+  contents: write  # This gives the bot permission to push changes
+
 jobs:
   build:
     runs-on: ubuntu-latest
