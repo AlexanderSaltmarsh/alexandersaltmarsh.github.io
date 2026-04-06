@@ -29,8 +29,14 @@
     <h2>Scuba Diving</h2>
     <p>
         As a certified scuba diver, I enjoy exploring underwater environments and experiencing a completely
-        different world beneath the surface.
+        different world beneath the surface. Thanks to <a href="https://kai-sims.github.io/index.html" target="_blank" rel="noopener noreferrer">Kai</a> for the pictures!
     </p>
+    
+    <div class="media-gallery">
+        <img src="media/scuba1.png" alt="Scuba Diving 1" class="lightbox-trigger">
+        <img src="media/scuba2.png" alt="Scuba Diving 2" class="lightbox-trigger">
+        <img src="media/scuba3.png" alt="Scuba Diving 3" class="lightbox-trigger">
+    </div>
 
     <h2>Music</h2>
     <p>
@@ -40,29 +46,59 @@
 
 </section>
 
-</section>
-<div id="steam-activity">
-        <h3>Recently Playing</h3>
-        <div id="game-list"></div>
-    </div>
+<section id="steam-activity">
+    <h3>Recently Playing</h3>
+    <div id="game-list"></div>
 </section>
 
+<div id="mediaModal" class="modal">
+  <span class="close-modal">&times;</span>
+  <div id="modalContentWrapper"></div>
+</div>
+
 <script>
-  fetch('./recently_played.json')
-    .then(response => response.json())
-    .then(data => {
-      const container = document.getElementById('game-list');
-      data.forEach(game => {
-        container.innerHTML += `
-          <div class="game-card">
-            <img src="${game.image}" alt="${game.name}" width="200" style="border-radius: 8px;">
-            <p><strong>${game.name}</strong></p> 
-          </div>
-        `;
+    // Steam Tracker Logic
+    fetch('./recently_played.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('game-list');
+        data.forEach(game => {
+          container.innerHTML += `
+            <div class="game-card">
+              <img src="${game.image}" alt="${game.name}" width="200" style="border-radius: 8px;">
+              <p><strong>${game.name}</strong></p> 
+            </div>
+          `;
+        });
       });
+
+    // Lightbox Logic (Copied from projects.html so the scuba images can pop out)
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('mediaModal');
+      const modalWrapper = document.getElementById('modalContentWrapper');
+      const closeBtn = document.querySelector('.close-modal');
+      const triggers = document.querySelectorAll('.lightbox-trigger');
+
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+          modalWrapper.innerHTML = ''; 
+          const elementClone = this.cloneNode(true);
+          elementClone.classList.remove('lightbox-trigger');
+          modalWrapper.appendChild(elementClone);
+          modal.classList.add('show');
+        });
+      });
+
+      const closeModal = () => {
+        modal.classList.remove('show');
+        setTimeout(() => { modalWrapper.innerHTML = ''; }, 300); 
+      };
+
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
     });
 </script>
-</section>
 
 </body>
 </html>
