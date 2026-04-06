@@ -16,10 +16,76 @@
     </ul>
 </nav>
 
-<section>
-    <h1>Projects</h1>
-    <p>Details about my engineering projects will go here.</p>
-</section>
+<div class="projects-container">
+  
+  <aside class="projects-legend">
+    <h3>Project Index</h3>
+    <ul>
+      <li><a href="#rocketry">Rocketry & Propulsion</a></li>
+      </ul>
+  </aside>
+
+  <div class="projects-content">
+    
+    <section id="rocketry" class="project-module">
+      <h2>Rocketry & Propulsion</h2>
+      <p>TEST STAND INFORMATION [UPDATE]</p>
+
+      <div class="media-gallery">
+        <img src="media/rocket1.jpg" alt="Rocketry Image 1" class="lightbox-trigger">
+        <img src="media/rocket2.jpg" alt="Rocketry Image 2" class="lightbox-trigger">
+        <img src="media/rocket3.jpg" alt="Rocketry Image 3" class="lightbox-trigger">
+        <img src="media/rocket4.jpg" alt="Rocketry Image 4" class="lightbox-trigger">
+        <img src="media/rocket5.jpg" alt="Rocketry Image 5" class="lightbox-trigger">
+        
+        <video class="lightbox-trigger">
+          <source src="media/bang_metal.mov" type="video/mov">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div id="mediaModal" class="modal">
+  <span class="close-modal">&times;</span>
+  <div id="modalContentWrapper">
+    </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('mediaModal');
+    const modalWrapper = document.getElementById('modalContentWrapper');
+    const closeBtn = document.querySelector('.close-modal');
+    const triggers = document.querySelectorAll('.lightbox-trigger');
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', function() {
+        modalWrapper.innerHTML = ''; 
+        const elementClone = this.cloneNode(true);
+        
+        if (elementClone.tagName.toLowerCase() === 'video') {
+          elementClone.setAttribute('controls', 'true');
+          elementClone.play();
+        }
+        
+        elementClone.classList.remove('lightbox-trigger');
+        modalWrapper.appendChild(elementClone);
+        modal.classList.add('show');
+      });
+    });
+
+    const closeModal = () => {
+      modal.classList.remove('show');
+      setTimeout(() => { modalWrapper.innerHTML = ''; }, 300); 
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+  });
+</script>
 
 </body>
 </html>

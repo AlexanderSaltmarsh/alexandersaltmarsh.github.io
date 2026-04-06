@@ -119,6 +119,134 @@ nav a.active {
 }
 
 /* =========================================
+   PROJECTS PAGE LAYOUT
+   ========================================= */
+
+
+   /* Layout for the overall projects section */
+.projects-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Sticky Navigation Legend */
+.projects-legend {
+  flex: 0 0 200px;
+  position: sticky;
+  top: 2rem;
+  padding: 1rem;
+  background: #f4f4f4;
+  border-radius: 8px;
+}
+
+.projects-legend ul {
+  list-style: none;
+  padding: 0;
+}
+
+.projects-legend a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.projects-legend a:hover {
+  color: #007bff; 
+}
+
+/* Project Content Area */
+.projects-content {
+  flex: 1;
+}
+
+.project-module {
+  margin-bottom: 4rem;
+}
+
+/* Responsive Media Grid */
+.media-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Uniform sizing and cropping for the grid */
+.media-gallery img,
+.media-gallery video {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer; /* Changes mouse to a pointer to indicate it's clickable */
+  transition: transform 0.2s ease; /* Subtle hover effect */
+}
+
+.media-gallery img:hover,
+.media-gallery video:hover {
+  transform: scale(1.02); /* Slight zoom on hover to show interactivity */
+}
+
+/* --- Lightbox Modal Styles --- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; /* Ensures it sits on top of everything */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black background */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth fade in */
+}
+
+.modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+#modalContentWrapper {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* Styling the media inside the pop-out */
+#modalContentWrapper img,
+#modalContentWrapper video {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/* =========================================
    CURRENT STUDIES PAGE LAYOUT
    ========================================= */
 
