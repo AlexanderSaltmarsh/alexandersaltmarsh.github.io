@@ -13,7 +13,7 @@ body {
 header {
     background: #e26608;
     color: white;
-    padding: .1rem;
+    padding: .25rem;
     text-align: center;
 }
 
@@ -25,8 +25,8 @@ section {
 }
 section h1, section h2 {
     text-align: center;
-    margin-bottom: 0.75rem; /* This pulls the paragraph up toward the heading */
-    margin-top: 1rem;    /* Optional: Controls the space above the heading */
+    margin-bottom: 0.5rem; /* This pulls the paragraph up toward the heading */
+    margin-top: 0.5rem;    /* Optional: Controls the space above the heading */
 }
 
 section p {
@@ -85,12 +85,16 @@ nav a.active {
 
 .profile-pic {
     width: 225px;
-    height: 300px;          /* 4:3 ratio (300 / 4 * 3 = 225) */
-    object-fit: cover;      /* crops image nicely */
-    border-radius: 20px;    /* rounded rectangle (NOT circle) */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
     display: block;
-    margin: 1rem auto;
     border: 3px solid #222;
+
+    /* THE SYMMETRY SETTINGS: */
+    /* Top: 0.75rem margin + 0.75rem section padding = 1.5rem */
+    /* Bottom: 1.5rem margin collapses with 0.5rem h2 margin = 1.5rem */
+    margin: 0.75rem auto 1.5rem auto; 
 }
 
 .pdf-links {
@@ -98,17 +102,18 @@ nav a.active {
     justify-content: center;
     gap: 2rem;
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .pdf-button {
     display: inline-block;
     padding: 0.8rem 1.6rem;
-    background: #111;
+    background: #222;
     color: white;
     text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
-    border: 2px solid #111;
+    border: 2px solid #222;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     transition: all 0.2s ease;
 }
@@ -144,7 +149,7 @@ nav a.active {
   position: fixed;
   top: 80px; /* Adjust this so it sits below your main navbar */
   left: 20px;
-  background-color: #333;
+  background-color: #222;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -157,7 +162,7 @@ nav a.active {
 }
 
 .legend-toggle:hover {
-  background-color: #555;
+  background-color: #222;
 }
 
 .projects-legend-drawer {
@@ -187,7 +192,7 @@ nav a.active {
   top: 10px;
   right: 15px;
   cursor: pointer;
-  color: #333;
+  color: #222;
 }
 
 .projects-legend-drawer ul {
@@ -198,7 +203,7 @@ nav a.active {
 
 .projects-legend-drawer a {
   text-decoration: none;
-  color: #333;
+  color: #222;
   display: block;
   padding: 10px 15px;
   margin-bottom: 5px;
@@ -365,7 +370,7 @@ nav a.active {
 .legend-nav h3 {
     margin-top: 0;
     font-size: 1.1rem;
-    border-bottom: 2px solid #111;
+    border-bottom: 2px solid #222;
     padding-bottom: 5px;
 }
 
@@ -381,11 +386,11 @@ nav a.active {
 
 .legend-nav a {
     text-decoration: none;
-    color: #444;
+    color: #222;
 }
 
 .legend-nav a:hover {
-    color: #111;
+    color: #222;
     text-decoration: underline;
 }
 
