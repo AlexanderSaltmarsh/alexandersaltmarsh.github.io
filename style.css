@@ -123,47 +123,97 @@ nav a.active {
    ========================================= */
 
 
-   /* Layout for the overall projects section */
+/* Centered Layout for the overall projects section */
 .projects-container {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+  display: block; /* Removed flex */
 }
 
-/* Sticky Navigation Legend */
-.projects-legend {
-  flex: 0 0 200px;
-  position: sticky;
-  top: 2rem;
-  padding: 1rem;
-  background: #f4f4f4;
-  border-radius: 8px;
-}
-
-.projects-legend ul {
-  list-style: none;
-  padding: 0;
-}
-
-.projects-legend a {
-  text-decoration: none;
-  color: #333;
-  display: block;
-  padding: 0.5rem 0;
-  transition: color 0.3s;
-}
-
-.projects-legend a:hover {
-  color: #007bff; 
-}
-
-/* Project Content Area */
+/* Project Content Area - Centered */
 .projects-content {
-  flex: 1;
+  max-width: 900px; /* Constrains the width */
+  margin: 0 auto; /* Centers the div horizontally */
+  padding: 2rem 1rem;
 }
 
 .project-module {
-  margin-bottom: 4rem;
+  margin-bottom: 6rem; /* Extra breathing room between sections */
+}
+
+/* --- Pop-Out Menu Styles --- */
+.legend-toggle {
+  position: fixed;
+  top: 80px; /* Adjust this so it sits below your main navbar */
+  left: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 900;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+.legend-toggle:hover {
+  background-color: #555;
+}
+
+.projects-legend-drawer {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Hidden off-screen by default */
+  width: 250px;
+  height: 100vh;
+  background: #f4f4f4;
+  padding: 2rem;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+/* Class added by JavaScript to slide the menu in */
+.projects-legend-drawer.open {
+  left: 0; 
+}
+
+.close-legend {
+  background: none;
+  border: none;
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  color: #333;
+}
+
+.projects-legend-drawer ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.projects-legend-drawer a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  border-left: 4px solid transparent; /* Prep for the active glow indicator */
+}
+
+/* The Hover and Active "Glow" State */
+.projects-legend-drawer a:hover,
+.projects-legend-drawer a.active {
+  color: #ff9800; /* Subtle orange text */
+  background-color: rgba(255, 152, 0, 0.1); /* Very light orange background */
+  border-left: 4px solid #ff9800; /* Orange bar on the left */
+  text-shadow: 0 0 8px rgba(255, 152, 0, 0.4); /* The glowing effect */
 }
 
 /* Responsive Media Grid */

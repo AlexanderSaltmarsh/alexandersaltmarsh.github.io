@@ -16,9 +16,12 @@
     </ul>
 </nav>
 
+<button id="legendToggle" class="legend-toggle">☰ Index</button>
+
 <div class="projects-container">
   
-  <aside class="projects-legend">
+  <aside id="projectsLegend" class="projects-legend-drawer">
+    <button id="closeLegend" class="close-legend">&times;</button>
     <h3>Project Index</h3>
     <ul>
       <li><a href="#rocketry">Rocketry & Propulsion</a></li>
@@ -39,12 +42,13 @@
         <img src="media/Rocketry Image 5.jpg" alt="Rocketry Image 5" class="lightbox-trigger">
         
         <video class="lightbox-trigger" preload="metadata" muted>
-        <source src="media/bang_metal.mov" type="video/quicktime">
-        Your browser does not support the video tag.
+          <source src="media/bang_metal.mov" type="video/quicktime">
+          Your browser does not support the video tag.
         </video>
       </div>
     </section>
-  </div>
+    
+    </div>
 </div>
 
 <div id="mediaModal" class="modal">
@@ -55,6 +59,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // 1. LIGHTBOX LOGIC
     const modal = document.getElementById('mediaModal');
     const modalWrapper = document.getElementById('modalContentWrapper');
     const closeBtn = document.querySelector('.close-modal');
@@ -84,7 +89,52 @@
     closeBtn.addEventListener('click', closeModal);
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-  });
+
+    // 2. POP-OUT MENU LOGIC
+    const menuToggle = document.getElementById('legendToggle');
+    const closeLegend = document.getElementById('closeLegend');
+    const legendDrawer = document.getElementById('projectsLegend');
+
+    menuToggle.addEventListener('click', () => {
+      legendDrawer.classList.add('open');
+    });
+
+    closeLegend.addEventListener('click', () => {
+      legendDrawer.classList.remove('open');
+    });
+
+    const legendLinks = document.querySelectorAll('.projects-legend-drawer a');
+    legendLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        legendDrawer.classList.remove('open');
+      });
+    });
+
+    // 3. SCROLLSPY LOGIC
+    const sections = document.querySelectorAll('.project-module');
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.4 // Triggers when 40% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          legendLinks.forEach(link => link.classList.remove('active'));
+          const activeId = entry.target.getAttribute('id');
+          const activeLink = document.querySelector(`.projects-legend-drawer a[href="#${activeId}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    }); // Fixed: added closing bracket/parenthesis
+  }); // Fixed: added closing bracket/parenthesis for DOMContentLoaded
 </script>
 
 </body>
