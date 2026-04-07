@@ -43,12 +43,30 @@
         <img src="media/scuba3.png" alt="Scuba Diving 3" class="lightbox-trigger">
     </div>
 
-    <h2>Music</h2>
-    <p>
-        I am a jazz flutist and also play guitar. Music has been a major part of my life and is something
-        I continue to pursue alongside my engineering work.
-    </p>
+</section>
 
+<section id="music-hobby">
+    <div class="music-header">
+        <h2>Music</h2>
+        <p>Whether I'm performing or just listening, music is a constant background to my work and travels.</p>
+    </div>
+
+    <div class="music-container">
+        <div class="personal-music">
+            <h3>My Gear</h3>
+            <ul class="instrument-list">
+                <li>Jazz Flute</li>
+                <li>Guitar</li>
+            </ul>
+        </div>
+
+        <div class="spotify-rotation">
+            <h3>On Repeat This Month</h3>
+            <div id="spotify-artist-list" class="spotify-flex">
+                <p class="loading-msg">Tuning the radio...</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="steam-activity">
@@ -60,6 +78,42 @@
   <span class="close-modal">&times;</span>
   <div id="modalContentWrapper"></div>
 </div>
+<script>
+async function loadHobbySpotifyData() {
+    try {
+        // Pointing to the JSON file in your root directory
+        const response = await fetch('./spotify_data.json');
+        const artists = await response.json();
+        
+        const listContainer = document.getElementById('spotify-artist-list');
+        listContainer.innerHTML = ''; // Clear the loading message
+
+        // Take the top 3 artists
+        const topThree = artists.slice(0, 3);
+
+        topThree.forEach(artist => {
+            const artistLink = document.createElement('a');
+            artistLink.href = artist.url;
+            artistLink.target = "_blank";
+            artistLink.className = 'artist-item';
+
+            artistLink.innerHTML = `
+                <img src="${artist.image}" alt="${artist.name}">
+                <span>${artist.name}</span>
+            `;
+
+            listContainer.appendChild(artistLink);
+        });
+    } catch (error) {
+        console.error("Error loading music data:", error);
+        document.getElementById('spotify-artist-list').innerHTML = "<p>Unable to load top artists right now.</p>";
+    }
+}
+
+// Run when the hobbies page loads
+document.addEventListener('DOMContentLoaded', loadHobbySpotifyData);
+</script>
+
 
 <script>
     // Steam Tracker Logic

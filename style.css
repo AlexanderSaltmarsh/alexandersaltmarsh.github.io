@@ -428,6 +428,72 @@ nav a.active {
 /* =========================================
    Hobbies Page Layout
    ========================================= */
+#music-hobby {
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+}
+
+.music-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Gives the Spotify feed more room */
+    gap: 40px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .music-container {
+        grid-template-columns: 1fr; /* Stacks on mobile */
+    }
+}
+
+.instrument-list {
+    list-style: none;
+    padding: 0;
+}
+
+.instrument-list li {
+    background: #f4f4f4;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border-left: 4px solid #1DB954; /* A nod to Spotify green */
+}
+
+.spotify-flex {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.artist-item {
+    text-align: center;
+    width: 130px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+.artist-item:hover {
+    transform: scale(1.05);
+}
+
+.artist-item img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 8px;
+}
+
+.artist-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: block;
+}
+
+
+
 
    /* Centers the Steam activity area */
 #steam-activity {

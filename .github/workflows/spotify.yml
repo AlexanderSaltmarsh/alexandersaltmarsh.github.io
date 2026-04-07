@@ -3,6 +3,10 @@ on:
   schedule:
     - cron: '0 0 * * *' # Runs at midnight daily
   workflow_dispatch: # Allows you to run it manually to test
+
+  permissions:
+  contents: write  # This gives the bot permission to push changes
+
   push:
     branches: [ main ] # Runs every time you push code
 
