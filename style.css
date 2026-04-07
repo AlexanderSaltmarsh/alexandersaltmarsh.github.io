@@ -434,10 +434,10 @@ nav a.active {
 }
 
 .music-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Gives the Spotify feed more room */
-    gap: 40px;
-    margin-top: 20px;
+    display: block; /* Removes the 1fr/2fr grid split */
+    width: 100%;    /* Ensures it spans the whole page width */
+    margin: 0 auto;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -446,23 +446,19 @@ nav a.active {
     }
 }
 
-.instrument-list {
-    list-style: none;
-    padding: 0;
-}
-
-.instrument-list li {
-    background: #f4f4f4;
-    margin-bottom: 10px;
-    padding: 10px 15px;
-    border-radius: 8px;
-    border-left: 4px solid #1DB954; /* A nod to Spotify green */
-}
-
+/* Ensure the flexbox inside also knows to stay centered */
 .spotify-flex {
     display: flex;
-    gap: 15px;
+    justify-content: center; 
+    gap: 20px;
     flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* 2. Center the "Top Played" header */
+#music-hobby h2 {
+    text-align: center;
+    width: 100%;
 }
 
 .artist-item {
