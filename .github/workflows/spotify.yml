@@ -1,35 +1,40 @@
 name: Update Spotify Data
+
 on:
   schedule:
     - cron: '0 0 * * *' # Runs at midnight daily
   workflow_dispatch: # Allows you to run it manually to test
-
-  permissions:
-  contents: write  # This gives the bot permission to push changes
-
   push:
     branches: [ main ] # Runs every time you push code
+
+permissions:
+  contents: write  # This gives the bot permission to push changes
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+          
       - name: Install dependencies
         run: pip install requests
+        
       - name: Run Fetch Script
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
         run: python fetch_spotify.py
+        
       - name: Commit and Push Data
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add spotify_data.json
+          # Only commit if the file actually changed
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update Spotify data" && git push)
