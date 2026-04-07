@@ -94,15 +94,15 @@ nav a.active {
     /* THE SYMMETRY SETTINGS: */
     /* Top: 0.75rem margin + 0.75rem section padding = 1.5rem */
     /* Bottom: 1.5rem margin collapses with 0.5rem h2 margin = 1.5rem */
-    margin: 0.75rem auto 1.5rem auto; 
+    margin: 1rem auto 1.5rem auto; 
 }
 
 .pdf-links {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .pdf-button {
