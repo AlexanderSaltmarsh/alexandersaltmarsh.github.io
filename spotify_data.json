@@ -5,13 +5,13 @@
         "image": "https://i.scdn.co/image/ab6761610000e5ebd3870d0ed0f0453fefa2f975"
     },
     {
-        "name": "Green Day",
-        "url": "https://open.spotify.com/artist/7oPftvlwr6VrsViSDV7fJY",
-        "image": "https://i.scdn.co/image/ab6761610000e5eb6ff0cd5ef2ecf733804984bb"
-    },
-    {
         "name": "Ramones",
         "url": "https://open.spotify.com/artist/1co4F2pPNH8JjTutZkmgSm",
         "image": "https://i.scdn.co/image/ab6761610000e5eb5b9f46a5c5bf8243179d56b0"
+    },
+    {
+        "name": "Stevie Ray Vaughan",
+        "url": "https://open.spotify.com/artist/5fsDcuclIe8ZiBD5P787K1",
+        "image": "https://i.scdn.co/image/1de60c936683320769a1bfb6fba7f75902859085"
     }
 ]
