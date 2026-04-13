@@ -31,15 +31,16 @@
     <button id="closeLegend" class="close-legend">&times;</button>
     <h3>Project Index</h3>
     <ul>
-      <li><a href="#rocketry">Rocketry & Propulsion</a></li>
-      </ul>
+      <li><a href="#rocketry">Rocket Test Stand</a></li>
+      <li><a href="#hermes">"Hermes" Solid-Fuel Rocket</a></li>
+    </ul>
   </aside>
 
   <div class="projects-content">
     
     <section id="rocketry" class="project-module">
-      <h2>Rocketry & Propulsion</h2>
-      <p>Test Stand for Liquid Rocket Engine Development on UCSD's Rocketry Team. Check out the video of the stand surviving an explosion during a test!</p>
+      <h2>Rocket Test Stand</h2>
+      <p>Test Stand for the "Phoenix" Liquid Bipropellant Rocket on UCSD's Rocketry Team. I had the chance to learn waterjetting and basic MIG welding for this project, really enjoyable experience. The video at the end shows the stand surviving a particularly fiery test.</p>
 
       <div class="media-gallery">
         <img src="media/Rocketry Image 1.jpg" alt="Rocketry Image 1" class="lightbox-trigger">
@@ -54,8 +55,26 @@
         </video>
       </div>
     </section>
+
+    <section id="hermes" class="project-module">
+      <h2>"Hermes" Solid-Fuel Rocket</h2>
+      <p>Designed and manufactured the Thrust-Chamber-Assembly for the "Hermes" solid-fuel rocket. Also aided in the design and manufacturing of the internal structure, segment spacers, avionics housing, and recovery system.</p>
+
+      <div class="media-gallery">
+        <img src="media/Hermes Image 1.jpg" alt="Hermes Image 1" class="lightbox-trigger">
+        <img src="media/Hermes Image 2.png" alt="Hermes Image 2" class="lightbox-trigger">
+        <img src="media/Hermes Image 3.png" alt="Hermes Image 3" class="lightbox-trigger">
+        <img src="media/Hermes Image 4.png" alt="Hermes Image 4" class="lightbox-trigger">
+        <img src="media/Hermes Image 5.png" alt="Hermes Image 5" class="lightbox-trigger">
+        
+        <video class="lightbox-trigger" preload="metadata" muted>
+          <source src="media/Hermes Launch.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
     
-    </div>
+  </div>
 </div>
 
 <div id="mediaModal" class="modal">
@@ -140,8 +159,8 @@
 
     sections.forEach(section => {
       observer.observe(section);
-    }); // Fixed: added closing bracket/parenthesis
-  }); // Fixed: added closing bracket/parenthesis for DOMContentLoaded
+    }); 
+  }); 
 </script>
 
 </body>
