@@ -520,6 +520,10 @@ nav a.active {
     margin: 50px 0;
 }
 
+.impactful-games-section h3 {
+    text-align: center;
+}
+
 .favorites-grid {
     display: flex;
     flex-direction: column; /* Forces one card per line */
