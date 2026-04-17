@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobbies</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Spacing fix to match the Projects page. 
+           You can move this rule to your style.css file if you prefer! */
+        .hobbies-container {
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,166 +32,163 @@
     </p>
 </header>
 
-<section>
-    <h2>Backpacking</h2>
-    <p>
-        I like getting out into nature and walking around. Credit to 
-        <a href="https://www.linkedin.com/in/julian-cheng-1037b3216/" target="_blank" rel="noopener noreferrer">Julian</a> and 
-        <a href="https://www.linkedin.com/in/knpham/" target="_blank" rel="noopener noreferrer">Kevin</a> 
-        for most of the pictures.
-    </p>
-    
-    <div class="media-gallery" style="margin-bottom: 40px;"> 
-        <img src="media/backpacking-1.png" alt="Backpacking on the trail" class="lightbox-trigger">
-        <img src="media/backpacking-2.jpg" alt="Campsite view" class="lightbox-trigger">
-        <img src="media/backpacking-3.jpg" alt="Mountain landscape" class="lightbox-trigger">
-        <img src="media/backpacking-4.jpg" alt="Hiking with gear" class="lightbox-trigger">
-        <img src="media/backpacking-5.jpg" alt="Morning coffee outdoors" class="lightbox-trigger">
-        <img src="media/backpacking-6.jpg" alt="Scenic overlook" class="lightbox-trigger">
-    </div>
+<div class="hobbies-container">
+
+    <section>
+        <h2>Backpacking</h2>
+        <p>
+            I like getting out into nature and walking around. Credit to 
+            <a href="https://www.linkedin.com/in/julian-cheng-1037b3216/" target="_blank" rel="noopener noreferrer">Julian</a> and 
+            <a href="https://www.linkedin.com/in/knpham/" target="_blank" rel="noopener noreferrer">Kevin</a> 
+            for most of the pictures.
+        </p>
+        
+        <div class="media-gallery" style="margin-bottom: 40px;"> 
+            <img src="media/backpacking-1.png" alt="Backpacking on the trail" class="lightbox-trigger">
+            <img src="media/backpacking-2.jpg" alt="Campsite view" class="lightbox-trigger">
+            <img src="media/backpacking-3.jpg" alt="Mountain landscape" class="lightbox-trigger">
+            <img src="media/backpacking-4.jpg" alt="Hiking with gear" class="lightbox-trigger">
+            <img src="media/backpacking-5.jpg" alt="Morning coffee outdoors" class="lightbox-trigger">
+            <img src="media/backpacking-6.jpg" alt="Scenic overlook" class="lightbox-trigger">
+        </div>
+    </section>
 
     <hr class="section-divider">
 
-    <h2>Surfing & Fishing</h2>
-    
-    <p>
-        I like surfin and fishin. The ocean is very nice. I am very thankful to have grown up with and live by the ocean.
-    </p>
-    
-    <div class="media-gallery" style="margin-bottom: 40px;"> <img src="media/surfing-fishing-1.jpg" alt="Surfing Action" class="lightbox-trigger">
-        <img src="media/surfing-fishing-2.jpg" alt="Fishing on the Coast" class="lightbox-trigger">
-        <img src="media/surfing-fishing-3.jpg" alt="Sunset on the water" class="lightbox-trigger">
-    </div>
+    <section>
+        <h2>Surfing & Fishing</h2>
+        <p>
+            I like surfin and fishin. The ocean is very nice. I am very thankful to have grown up with and live by the ocean.
+        </p>
+        
+        <div class="media-gallery" style="margin-bottom: 40px;"> 
+            <img src="media/surfing-fishing-1.jpg" alt="Surfing Action" class="lightbox-trigger">
+            <img src="media/surfing-fishing-2.jpg" alt="Fishing on the Coast" class="lightbox-trigger">
+            <img src="media/surfing-fishing-3.jpg" alt="Sunset on the water" class="lightbox-trigger">
+        </div>
+    </section>
 
     <hr class="section-divider">
 
-    <h2>Scuba Diving</h2>
-    <p>
-        As a certified scuba diver, I enjoy exploring underwater environments and experiencing a completely
-        different world beneath the surface. Thanks to <a href="https://kai-sims.github.io/index.html" target="_blank" rel="noopener noreferrer">Kai</a> for the pictures!
-    </p>
-    
-    <div class="media-gallery">
-        <img src="media/scuba1.png" alt="Scuba Diving 1" class="lightbox-trigger">
-        <img src="media/scuba2.png" alt="Scuba Diving 2" class="lightbox-trigger">
-        <img src="media/scuba3.png" alt="Scuba Diving 3" class="lightbox-trigger">
-    </div>
+    <section>
+        <h2>Scuba Diving</h2>
+        <p>
+            As a certified scuba diver, I enjoy exploring underwater environments and experiencing a completely
+            different world beneath the surface. Thanks to <a href="https://kai-sims.github.io/index.html" target="_blank" rel="noopener noreferrer">Kai</a> for the pictures!
+        </p>
+        
+        <div class="media-gallery">
+            <img src="media/scuba1.png" alt="Scuba Diving 1" class="lightbox-trigger">
+            <img src="media/scuba2.png" alt="Scuba Diving 2" class="lightbox-trigger">
+            <img src="media/scuba3.png" alt="Scuba Diving 3" class="lightbox-trigger">
+        </div>
+    </section>
 
+    <section id="music-hobby">
+        <div class="music-header">
+            <hr class="section-divider">
+            <h2>Music</h2>
+            <p>Whether I'm performing or just listening, music is a constant background to my work and travels.</p>
+        </div>
 
+        <div class="music-container">
+            <div class="spotify-rotation">
+                <h3>Top Played This Month</h3>
+                <div id="spotify-artist-list" class="spotify-flex">
+                    <p class="loading-msg">Tuning the radio...</p>
+                </div>
+            </div>
 
-<section id="music-hobby">
-    <div class="music-header">
-        <hr class="section-divider">
-        <h2>Music</h2>
-        <p>Whether I'm performing or just listening, music is a constant background to my work and travels.</p>
-    </div>
+            <div class="impactful-artists-section" style="margin-top: 50px;">
+                <h3>Artists That Inspire Me</h3>
+                <div class="favorites-grid">
+                    
+                    <div class="impact-card">
+                        <div class="game-image-container">
+                            <img src="media/artist-impact-1.jpg" alt="Jazz Artist" class="game-card-img">
+                        </div>
+                        <div class="game-details">
+                            <h4>Green Day</h4>
+                            <p>Love their music. Green Day speaks their mind, and I like hearing their mind. Going to see them has been incredible...</p>
+                        </div>
+                    </div>
 
-    <div class="music-container">
-        <div class="spotify-rotation">
-            <h3>Top Played This Month</h3>
-            <div id="spotify-artist-list" class="spotify-flex">
-                <p class="loading-msg">Tuning the radio...</p>
+                    <div class="impact-card">
+                        <div class="game-image-container">
+                            <img src="media/artist-impact-2.jpg" alt="Punk Rock" class="game-card-img">
+                        </div>
+                        <div class="game-details">
+                            <h4>Stevie Ray Vaughan</h4>
+                            <p>SRV feels like a master in a genre of masters. He does it like no others. He's unapologatic, honest, and simple. I like SRV.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="impactful-artists-section" style="margin-top: 50px;">
-            <h3>Artists That Inspire Me</h3>
-            <div class="favorites-grid">
-                
-                <div class="impact-card">
-                    <div class="game-image-container">
-                        <img src="media/artist-impact-1.jpg" alt="Jazz Artist" class="game-card-img">
-                    </div>
-                    <div class="game-details">
-                        <h4>Green Day</h4>
-                        <p>Love their music. Green Day speaks their mind, and I like hearing their mind. Going to see them has been incredible...
-                        </p>
-                    </div>
+    <hr class="section-divider">
+
+    <section id="gaming-hobby">
+        <div class="gaming-header">
+            <h2>Computer Games</h2>
+            <p>Since I was a kid, I've always been fascinated by computer games. Some of my earliest memories are of playing strategy games with my Dad, and I find that some of these computer programs have genuinely influenced my passions and the trajectory I've taken my life.</p>
+        </div>
+
+        <div class="gaming-container">
+            <div class="steam-rotation">
+                <h3>Recently Playing</h3>
+                <div id="game-list">
                 </div>
+            </div>
 
-                <div class="impact-card">
-                    <div class="game-image-container">
-                        <img src="media/artist-impact-2.jpg" alt="Punk Rock" class="game-card-img">
+            <div class="impactful-games-section">
+                <h3>Games That Inspire Me</h3>
+                <div class="favorites-grid">
+                    
+                    <div class="impact-card">
+                        <div class="game-image-container">
+                            <img src="media/game-impact-1.jpg" alt="Game Title One" class="game-card-img">
+                        </div>
+                        <div class="game-details">
+                            <h4>Civilization IV</h4>
+                            <p>First game I ever played. I have countless fond memories of playing it with my Dad, and I truly can't exagerrate the role that Civ IV played in inspiring my passion for history at a young age. It was in Civ IV that I first heard "a designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away." This game helped form some of my earliest and most fundamental technical interests, and I can say without a doubt that it truly impacted the trajectory of my life.</p>
+                        </div>
                     </div>
-                    <div class="game-details">
-                        <h4>Stevie Ray Vaughan</h4>
-                        <p>SRV feels like a master in a genre of masters. He does it like no others. He's unapologatic, honest, and simple. I like SRV.
-                        </p>
+
+                    <div class="impact-card">
+                        <div class="game-image-container">
+                            <img src="media/game-impact-2.jpg" alt="Game Title Two" class="game-card-img">
+                        </div>
+                        <div class="game-details">
+                            <h4>Witcher 3</h4>
+                            <p>This game is goated. Fantasy world is awesome. Big Fan.</p>
+                        </div>
                     </div>
+
+                    <div class="impact-card">
+                        <div class="game-image-container">
+                            <img src="media/game-impact-3.jpg" alt="Game Title Three" class="game-card-img">
+                        </div>
+                        <div class="game-details">
+                            <h4>Rome Total War</h4>
+                            <p>The scale in this game rocked my brain. Conquering the classical world, playing out the rise of Rome, figuring out the strengths and weaknesses of different military units. Learning about the different cultures and the history behind each faction. Plus, it's pretty incredibly fun. Barbarian Invasion Expansion was awesome as well. Greeks & Brutii always on top.</p>
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-        <hr class="section-divider">
-<section id="gaming-hobby">
-    <div class="gaming-header">
-        <h2>Computer Games</h2>
-        <p>Since I was a kid, I've always been fascinated by computer games. Some of my earliest memories are of playing strategy games with my Dad, and I find that some of these computer programs have genuinely influenced my passions and the trajectory I've taken my life.</p>
-    </div>
-
-    <div class="gaming-container">
-        <div class="steam-rotation">
-            <h3>Recently Playing</h3>
-            <div id="game-list">
-                </div>
-        </div>
-
-
-        <div class="impactful-games-section">
-            <h3>Games That Inspire Me</h3>
-            <div class="favorites-grid">
-                
-                <div class="impact-card">
-                    <div class="game-image-container">
-                        <img src="media/game-impact-1.jpg" alt="Game Title One" class="game-card-img">
-                    </div>
-                    <div class="game-details">
-                        <h4>Civilization IV</h4>
-                        <p>First game I ever played. I have countless fond memories of playing it with my Dad, and I truly can't exagerrate the role that Civ IV played in inspiring my passion for history at a young age. It was in Civ IV that 
-                            I first heard "a designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away." This game helped form some
-                            of my earliest and most fundamental technical interests, and I can say without a doubt that it truly impacted the trajectory of my life.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="impact-card">
-                    <div class="game-image-container">
-                        <img src="media/game-impact-2.jpg" alt="Game Title Two" class="game-card-img">
-                    </div>
-                    <div class="game-details">
-                        <h4>Witcher 3</h4>
-                        <p>This game is goated. Fantasy world is awesome. Big Fan.</p>
-                    </div>
-                </div>
-
-                <div class="impact-card">
-                    <div class="game-image-container">
-                        <img src="media/game-impact-3.jpg" alt="Game Title Three" class="game-card-img">
-                    </div>
-                    <div class="game-details">
-                        <h4>Rome Total War</h4>
-                        <p>The scale in this game rocked my brain. Conquering the classical world, playing out the rise of Rome, figuring out the strengths and weaknesses of different military units. Learning about the different cultures
-                            and the history behind each faction. Plus, it's pretty incredibly fun. Barbarian Invasion Expansion was awesome as well. Greeks & Brutii always on top.
-                        </p>
-                    </div>
-                </div>
-
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
+</div>
 
 <div id="mediaModal" class="modal">
   <span class="close-modal">&times;</span>
   <div id="modalContentWrapper"></div>
 </div>
+
 <script>
 async function loadHobbySpotifyData() {
     try {
@@ -219,7 +224,6 @@ async function loadHobbySpotifyData() {
 // Run when the hobbies page loads
 document.addEventListener('DOMContentLoaded', loadHobbySpotifyData);
 </script>
-
 
 <script>
     // Steam Tracker Logic

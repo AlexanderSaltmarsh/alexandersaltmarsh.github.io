@@ -129,19 +129,20 @@ nav a.active {
 
 
 /* Centered Layout for the overall projects section */
+/* Add .hobbies-container to your existing projects container rule */
 .projects-container {
-  display: block; /* Removed flex */
+    margin-top: 5px; 
+    padding-top: 5px;
 }
 
-/* Project Content Area - Centered */
 .projects-content {
-  max-width: 900px; /* Constrains the width */
-  margin: 0 auto; /* Centers the div horizontally */
-  padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto; 
+    padding: 2rem 1rem; /* This is ~32px */
 }
 
 .project-module {
-  margin-bottom: 6rem; /* Extra breathing room between sections */
+    margin-bottom: 6rem;
 }
 
 /* --- Pop-Out Menu Styles --- */
@@ -305,26 +306,21 @@ nav a.active {
    CURRENT STUDIES PAGE LAYOUT
    ========================================= */
 
+/* Main wrapper to match Hobbies/Projects alignment */
+.studies-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 37px 1rem 2rem 1rem; 
+    box-sizing: border-box;
+}
+
 .section-divider {
     border: 0;
     height: 1px;
     background: #ccc;
-    margin: 50px 0;
-}
-
-/* --- Overrides for Studies Page --- */
-/* This prevents your global section centering from breaking the new layouts */
-.dynamic-section h2, 
-.domain-content h2, 
-.domain-block h3 {
-    text-align: left;
-}
-
-.study-log p, 
-.domain-block p {
-    text-align: left;
-    max-width: none;
-    margin: 0 0 1rem 0;
+    /* Centers the line and gives it a fixed or relative width */
+    width: 100%; 
+    margin: 50px auto;
 }
 
 /* --- Subsection 1: Recent Interests --- */
@@ -344,9 +340,35 @@ nav a.active {
     letter-spacing: 1px;
 }
 
-.study-log h3 {
-    margin-top: 5px;
-    margin-bottom: 10px;
+/* The Fixed Scroll Window */
+.interests-scroll-viewport {
+    height: 375px; 
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background: #fdfdfd; 
+    border-radius: 8px;
+    border: 1px solid #eee;
+    -webkit-overflow-scrolling: touch; 
+}
+
+/* Custom Scrollbar Styling */
+.interests-scroll-viewport::-webkit-scrollbar {
+    width: 8px;
+}
+.interests-scroll-viewport::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.interests-scroll-viewport::-webkit-scrollbar-thumb {
+    background: #e26608; /* Brand Orange */
+    border-radius: 10px;
+}
+
+.archive-header {
+    margin: 30px 0 15px 0; 
+    color: #777; 
+    font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
 /* --- Subsection 2: Long-Term Interests --- */
@@ -356,7 +378,6 @@ nav a.active {
     gap: 40px;
 }
 
-/* The Sticky Legend */
 .legend-nav {
     flex: 0 0 200px;
     position: sticky;
@@ -364,43 +385,12 @@ nav a.active {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
 }
 
-.legend-nav h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
-    border-bottom: 2px solid #222;
-    padding-bottom: 5px;
-}
-
-.legend-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.legend-nav li {
-    margin-bottom: 10px;
-}
-
-.legend-nav a {
-    text-decoration: none;
-    color: #222;
-}
-
-.legend-nav a:hover {
-    color: #222;
-    text-decoration: underline;
-}
-
-/* The Domain Content */
 .domain-content {
     flex: 1; 
-}
-
-.domain-content h2 {
-    margin-top: 0;
+    min-width: 0; /* Prevents text overflow */
 }
 
 .domain-block {
@@ -412,22 +402,36 @@ nav a.active {
     padding-bottom: 5px;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design */
 @media (max-width: 768px) {
     .static-section {
         flex-direction: column;
     }
-    
     .legend-nav {
         position: static;
         width: 100%;
-        box-sizing: border-box;
     }
 }
 
 /* =========================================
    Hobbies Page Layout
    ========================================= */
+
+.hobbies-container {
+    max-width: 900px;
+    /* This sets: Top: 5px, Right: auto, Bottom: 0, Left: auto */
+    margin: 5px auto 0 auto; 
+    
+    /* We combine the 5px nudge + 2rem (32px) = 37px for the top padding */
+    padding: 37px 1rem 2rem 1rem; 
+}
+
+/* Neutralize the global section padding */
+.hobbies-container section {
+    padding-top: 0 !important;
+}
+
+/* --- Rest of your Hobbies code (Music, Gaming, etc.) --- */
 #music-hobby {
     padding: 40px 0;
     border-top: 1px solid #eee;
