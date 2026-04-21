@@ -508,12 +508,19 @@ nav a.active {
     margin-top: 40px;
 }
 
-#game-list {
-    display: flex;
-    justify-content: center; 
-    flex-wrap: wrap; 
-    gap: 20px;
-    margin-top: 20px;
+#game-list > div {            /* Targets the individual card containers */
+    width: 220px;             /* Keeps all cards the same size */
+    text-align: center;
+}
+
+#game-list h4 {
+    font-size: 1rem;
+    min-height: 2.4em;        /* Reserves space for 2 lines so cards stay level */
+    line-height: 1.2;
+    display: -webkit-box;     /* Advanced: Crops text after 2 lines */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* --- Impactful Games Section (Single Entry Per Line) --- */
