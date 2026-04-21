@@ -508,17 +508,36 @@ nav a.active {
     margin-top: 40px;
 }
 
-#game-list > div {            /* Targets the individual card containers */
-    width: 220px;             /* Keeps all cards the same size */
+/* 1. The Container: Forces horizontal layout */
+#game-list {
+    display: flex;
+    flex-direction: row;      /* Keeps the items side-by-side */
+    justify-content: center;  /* Centers the group on the page */
+    flex-wrap: wrap;          /* Lets them drop to a new line on smaller screens */
+    gap: 25px;                /* Space between the games */
+    margin-top: 20px;
+}
+
+/* 2. The Individual Game Cards: Fixed width so text wraps */
+#game-list > div {            
+    width: 220px;             /* Matches your image width */
+    display: flex;
+    flex-direction: column;   /* Stacks the image and text vertically within the card */
+    align-items: center;      
     text-align: center;
 }
 
+/* 3. The Title Text: Two-line wrap logic */
 #game-list h4 {
     font-size: 1rem;
-    min-height: 2.4em;        /* Reserves space for 2 lines so cards stay level */
+    width: 100%;
+    margin-top: 10px;
+    
+    /* The wrapping logic */
+    min-height: 2.4em;        /* Reserves exact space for 2 lines */
     line-height: 1.2;
-    display: -webkit-box;     /* Advanced: Crops text after 2 lines */
-    -webkit-line-clamp: 2;
+    display: -webkit-box;     
+    -webkit-line-clamp: 2;    /* Cuts text off after 2 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
