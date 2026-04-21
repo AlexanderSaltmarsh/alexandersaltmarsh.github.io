@@ -487,11 +487,18 @@ nav a.active {
 }
 
 .artist-item span {
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: block;
+    font-size: 1rem;          /* Increased to match the gaming section */
+    font-weight: 600;         /* Keeping the bold look for artist names */
+    margin-top: 10px;         /* Adds the same spacing below the image */
+    
+    /* The 2-line wrapping logic from the gaming section */
+    min-height: 2.4em;        /* Reserves exact space for 2 lines */
+    line-height: 1.2;
+    display: -webkit-box;     
+    -webkit-line-clamp: 2;    /* Cuts text off after 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
-
 
 /* --- Gaming Section Container --- */
 #gaming-hobby {
