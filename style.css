@@ -537,7 +537,6 @@ nav a.active {
 /* 3. The Title Text: Two-line wrap logic */
 #game-list h4 {
     font-size: 1rem;
-    font-weight: normal;
     width: 100%;
     margin-top: 10px;
     
