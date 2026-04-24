@@ -23,10 +23,10 @@
     </p>
 </header>
 
-<button id="legendToggle" class="legend-toggle">☰ Index</button>
-
 <div class="projects-container">
   
+<button id="legendToggle" class="legend-toggle">☰ Index</button>
+
   <aside id="projectsLegend" class="projects-legend-drawer">
     <button id="closeLegend" class="close-legend">&times;</button>
     <h3>Project Index</h3>
@@ -43,7 +43,7 @@
       <h2>Rocket Test Stand</h2>
       <p>Test Stand for the "Phoenix" Liquid Bipropellant Rocket on UCSD's Rocketry Team. I had the chance to learn waterjetting and basic MIG welding for this project, really enjoyable experience. The video at the end shows the stand surviving a particularly fiery test.</p>
 
-      <div class="media-gallery">
+      <div class="media-gallery" style="margin-bottom: 20px;">
         <img src="media/Rocketry Image 1.jpg" alt="Rocketry Image 1" class="lightbox-trigger">
         <img src="media/Rocketry Image 2.jpg" alt="Rocketry Image 2" class="lightbox-trigger">
         <img src="media/Rocketry Image 3.jpg" alt="Rocketry Image 3" class="lightbox-trigger">
@@ -63,7 +63,7 @@
       <h2>"Hermes" Solid-Fuel Rocket</h2>
       <p>Designed and manufactured the Thrust-Chamber-Assembly for the "Hermes" solid-fuel rocket. Also aided in the design and manufacturing of the internal structure, segment spacers, avionics housing, and recovery system.</p>
 
-      <div class="media-gallery">
+      <div class="media-gallery" style="margin-bottom: 20px;">
         <img src="media/Hermes Image 1.jpg" alt="Hermes Image 1" class="lightbox-trigger">
         <img src="media/Hermes Image 2.png" alt="Hermes Image 2" class="lightbox-trigger">
         <img src="media/Hermes Image 3.png" alt="Hermes Image 3" class="lightbox-trigger">
@@ -83,7 +83,7 @@
         I worked to help make the hull for the submarine on UCSD's Human Powered Sub team. Though I didn't end up staying with the team too long, I still really value the chance to help contribute and work on the sub.
     </p>
 
-    <div class="media-gallery">
+    <div class="media-gallery" style="margin-bottom: 20px;">
         <img src="media/submarine1.png" alt="Submarine Design" class="lightbox-trigger">
         <img src="media/submarine2.png" alt="Manufacturing Phase" class="lightbox-trigger">
         <img src="media/submarine3.png" alt="Final Assembly" class="lightbox-trigger">
@@ -153,10 +153,12 @@
 
     // 3. SCROLLSPY LOGIC
     const sections = document.querySelectorAll('.project-module');
-    const observerOptions = {
+      const observerOptions = {
       root: null,
-      rootMargin: '0px',
-      threshold: 0.4 // Triggers when 40% of the section is visible
+      // Creates an invisible horizontal line across the dead center of the screen
+      rootMargin: '-50% 0px -50% 0px', 
+      // Triggers the moment the section touches that center line
+      threshold: 0 
     };
 
     const observer = new IntersectionObserver((entries) => {

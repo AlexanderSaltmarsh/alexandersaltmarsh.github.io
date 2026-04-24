@@ -9,32 +9,75 @@ body {
 }
 
 
+/* Standardize the wrappers so they don't add extra gaps */
+.hobbies-container,
+.projects-container,
+.projects-content {
+    margin: 0 auto;
+    padding: 0;
+    display: block; /* Ensures they don't behave like flexboxes unless you want them to */
+}
 
+/* This is the master control for the gap under the orange header */
+.hobbies-container,
+.projects-container,
+.projects-content,
+.project-module {
+    margin-top: 1rem; 
+}
+
+
+.section-divider {
+    max-width: 1000px;  /* Limits the width on large screens */
+    width: 90%;         /* Allows it to shrink on mobile devices */
+    margin: 1rem auto;  /* The 'auto' on left/right handles the centering */
+    opacity: 0.5;       /* Match your previous style preference */
+    border: 0;          /* Clear default browser styling */
+    border-top: 1px solid #ccc; /* Defines the actual line */
+}
+
+/* 1. Standardize the Orange Header */
 header {
     background: #e26608;
     color: white;
-    padding: .25rem;
+    padding: 2rem 1rem; /* Unified padding for a consistent "bar" height */
     text-align: center;
 }
 
-section {
-    /* 1rem for Top/Bottom, 2rem for Left/Right */
-    padding: .75rem 2rem; 
-    max-width: 1000px;
-    margin: auto;
+header h1 {
+    margin: 0; /* Remove default margin to prevent "pushing" the header */
 }
-section h1, section h2 {
+
+.intro-text {
+    margin: 0.5rem 0 0 0; /* Tight gap between title and subtitle */
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+
+/* 3. Section & Heading Spacing */
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1rem; /* Padding on sides for mobile, small gap on top */
+}
+
+section h2 {
     text-align: center;
-    margin-bottom: 0.5rem; /* This pulls the paragraph up toward the heading */
-    margin-top: 0.5rem;    /* Optional: Controls the space above the heading */
+    margin-top: 0;      /* Kill the top margin so it doesn't fight the container */
+    margin-bottom: 0.5rem; 
 }
 
 section p {
     text-align: center;
     line-height: 1.55;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto .5rem auto; /* Consistent bottom margin to push away the next thing */
 }
+
+
 
 /* Links */
 section a {
@@ -127,24 +170,6 @@ nav a.active {
    PROJECTS PAGE LAYOUT
    ========================================= */
 
-
-/* Centered Layout for the overall projects section */
-/* Add .hobbies-container to your existing projects container rule */
-.projects-container {
-    margin-top: 5px; 
-    padding-top: 5px;
-}
-
-.projects-content {
-    max-width: 900px;
-    margin: 0 auto; 
-    padding: 2rem 1rem; /* This is ~32px */
-}
-
-.project-module {
-    margin-bottom: 6rem;
-}
-
 /* --- Pop-Out Menu Styles --- */
 .legend-toggle {
   position: fixed;
@@ -224,27 +249,27 @@ nav a.active {
 
 /* Responsive Media Grid */
 .media-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 equal columns */
+    gap: 1rem;
 }
 
 /* Uniform sizing and cropping for the grid */
 .media-gallery img,
 .media-gallery video {
-  width: 100%;
-  height: 250px;
+  max-width: 100%; /* ADDED: This is the magic rule that stops the bug! It forces the image to obey the grid boundaries. */
+  width: 100%;     /* Keeps the image filling its designated grid cell */
+  height: 250px;   /* Kept this from your code so you maintain your uniform cropping */
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  cursor: pointer; /* Changes mouse to a pointer to indicate it's clickable */
-  transition: transform 0.2s ease; /* Subtle hover effect */
+  cursor: pointer; 
+  transition: transform 0.2s ease; 
 }
 
 .media-gallery img:hover,
 .media-gallery video:hover {
-  transform: scale(1.02); /* Slight zoom on hover to show interactivity */
+  transform: scale(1.02); 
 }
 
 /* --- Lightbox Modal Styles --- */
@@ -314,14 +339,7 @@ nav a.active {
     box-sizing: border-box;
 }
 
-.section-divider {
-    border: 0;
-    height: 1px;
-    background: #ccc;
-    /* Centers the line and gives it a fixed or relative width */
-    width: 100%; 
-    margin: 50px auto;
-}
+
 
 /* --- Subsection 1: Recent Interests --- */
 .study-log {
@@ -342,6 +360,7 @@ nav a.active {
 
 /* The Fixed Scroll Window */
 .interests-scroll-viewport {
+    margin-top: 1.5rem;
     height: 375px; 
     overflow-y: auto;
     overflow-x: hidden;
@@ -417,23 +436,10 @@ nav a.active {
    Hobbies Page Layout
    ========================================= */
 
-.hobbies-container {
-    max-width: 900px;
-    /* This sets: Top: 5px, Right: auto, Bottom: 0, Left: auto */
-    margin: 5px auto 0 auto; 
-    
-    /* We combine the 5px nudge + 2rem (32px) = 37px for the top padding */
-    padding: 37px 1rem 2rem 1rem; 
-}
-
-/* Neutralize the global section padding */
-.hobbies-container section {
-    padding-top: 0 !important;
-}
 
 /* --- Rest of your Hobbies code (Music, Gaming, etc.) --- */
 #music-hobby {
-    padding: 40px 0;
+    padding: 20px 0;
     border-top: 1px solid #eee;
 }
 
@@ -502,7 +508,7 @@ nav a.active {
 
 /* --- Gaming Section Container --- */
 #gaming-hobby {
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 .gaming-header {
@@ -550,12 +556,7 @@ nav a.active {
 }
 
 /* --- Impactful Games Section (Single Entry Per Line) --- */
-.section-divider {
-    border: 0;
-    height: 1px;
-    background: #ddd;
-    margin: 50px 0;
-}
+
 
 .impactful-games-section h3 {
     text-align: center;

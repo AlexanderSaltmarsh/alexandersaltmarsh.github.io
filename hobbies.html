@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobbies</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Spacing fix to match the Projects page. 
-           You can move this rule to your style.css file if you prefer! */
-        .hobbies-container {
-            margin-top: 40px;
-            padding-top: 20px;
-        }
-    </style>
+    
 </head>
 <body>
 
@@ -43,7 +36,7 @@
             for most of the pictures.
         </p>
         
-        <div class="media-gallery" style="margin-bottom: 40px;"> 
+        <div class="media-gallery" style="margin-bottom: 20px;"> 
             <img src="media/backpacking-1.png" alt="Backpacking on the trail" class="lightbox-trigger">
             <img src="media/backpacking-2.jpg" alt="Campsite view" class="lightbox-trigger">
             <img src="media/backpacking-3.jpg" alt="Mountain landscape" class="lightbox-trigger">
@@ -61,7 +54,7 @@
             I like surfin and fishin. The ocean is very nice. I am very thankful to have grown up with and live by the ocean.
         </p>
         
-        <div class="media-gallery" style="margin-bottom: 40px;"> 
+        <div class="media-gallery" style="margin-bottom: 20px;"> 
             <img src="media/surfing-fishing-1.jpg" alt="Surfing Action" class="lightbox-trigger">
             <img src="media/surfing-fishing-2.jpg" alt="Fishing on the Coast" class="lightbox-trigger">
             <img src="media/surfing-fishing-3.jpg" alt="Sunset on the water" class="lightbox-trigger">
@@ -77,16 +70,17 @@
             different world beneath the surface. Thanks to <a href="https://kai-sims.github.io/index.html" target="_blank" rel="noopener noreferrer">Kai</a> for the pictures!
         </p>
         
-        <div class="media-gallery">
+        <div class="media-gallery" style="margin-bottom: 20px;">
             <img src="media/scuba1.png" alt="Scuba Diving 1" class="lightbox-trigger">
             <img src="media/scuba2.png" alt="Scuba Diving 2" class="lightbox-trigger">
             <img src="media/scuba3.png" alt="Scuba Diving 3" class="lightbox-trigger">
         </div>
     </section>
 
+<hr class="section-divider">
+
     <section id="music-hobby">
         <div class="music-header">
-            <hr class="section-divider">
             <h2>Music</h2>
             <p>Whether I'm performing or just listening, music is a constant background to my work and travels.</p>
         </div>
@@ -128,7 +122,7 @@
         </div>
     </section>
 
-    <hr class="section-divider">
+<hr class="section-divider">
 
     <section id="gaming-hobby">
         <div class="gaming-header">
@@ -182,19 +176,21 @@
         </div>
     </section>
 
-</div>
-
-
+<hr class="section-divider">
 
 <section id="beautiful-pictures">
-    <hr class="section-divider">
         <div class="pictures-header">
             <h2>Beautiful Pictures</h2>
-        </div>
-        <div class="media-gallery">
+            <p>
+            Some pictures that I enjoy. Credit to 
+            <a href="https://www.linkedin.com/in/brianna-schultz-1a215330a/" target="_blank" rel="noopener noreferrer">Brianna</a> 
+            for the sunset.
+        </p>
+        <div class="media-gallery" style="margin-bottom: 20px;">
             <img src="media/beautiful-pic-1.jpg" alt="Beautiful Picture 1" class="lightbox-trigger">
             <img src="media/beautiful-pic-2.jpg" alt="Beautiful Picture 2" class="lightbox-trigger">
             <img src="media/beautiful-pic-3.jpg" alt="Beautiful Picture 3" class="lightbox-trigger">
+        </div>
         </div>
     </section>
     </div>
@@ -203,6 +199,10 @@
   <span class="close-modal">&times;</span>
   <div id="modalContentWrapper"></div>
 </div>
+
+</div>
+
+
 
 <script>
 async function loadHobbySpotifyData() {
