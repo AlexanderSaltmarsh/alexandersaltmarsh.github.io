@@ -1,13 +1,13 @@
 [
     {
-        "name": "Social Distortion",
-        "url": "https://open.spotify.com/artist/16nn7kCHPWIB6uK09GQCNI",
-        "image": "https://i.scdn.co/image/ab6761610000e5ebd3870d0ed0f0453fefa2f975"
-    },
-    {
         "name": "Ramones",
         "url": "https://open.spotify.com/artist/1co4F2pPNH8JjTutZkmgSm",
         "image": "https://i.scdn.co/image/ab6761610000e5eb5b9f46a5c5bf8243179d56b0"
+    },
+    {
+        "name": "Social Distortion",
+        "url": "https://open.spotify.com/artist/16nn7kCHPWIB6uK09GQCNI",
+        "image": "https://i.scdn.co/image/ab6761610000e5ebd3870d0ed0f0453fefa2f975"
     },
     {
         "name": "Stevie Ray Vaughan",
