@@ -351,6 +351,30 @@ nav a.active {
     margin-bottom: 20px;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+    /* New Flexbox properties */
+    display: flex;
+    align-items: center; /* Aligns the image to the top of the container */
+    gap: 25px; /* Creates the gap between the text and the image */
+}
+
+/* Ensure the text side takes up the remaining available space */
+.log-content {
+    flex: 1; 
+}
+
+/* Give the image container a fixed width */
+.log-image {
+    flex: 0 0 250px; /* Adjust the 250px to make the image box wider or narrower */
+}
+
+/* Style the image so it fits nicely inside its container */
+.log-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px; /* Matches your existing border-radius theme */
+    border: 1px solid #eee; /* Optional: adds a subtle border to the image */
+    object-fit: cover;
 }
 
 .study-log .date {
@@ -358,6 +382,15 @@ nav a.active {
     color: #777;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.log-image.book-cover {
+    flex: 0 0 140px; /* Makes the image column narrower for books */
+}
+
+.log-image.book-cover img {
+    aspect-ratio: 2 / 3; /* Forces a standard book cover shape */
+    object-fit: cover;
 }
 
 /* The Fixed Scroll Window */
