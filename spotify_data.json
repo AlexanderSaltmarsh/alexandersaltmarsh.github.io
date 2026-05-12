@@ -5,13 +5,13 @@
         "image": "https://i.scdn.co/image/ab6761610000e5ebcb844c45233a84f9f81c9ec4"
     },
     {
-        "name": "Ramones",
-        "url": "https://open.spotify.com/artist/1co4F2pPNH8JjTutZkmgSm",
-        "image": "https://i.scdn.co/image/ab6761610000e5eb5b9f46a5c5bf8243179d56b0"
-    },
-    {
         "name": "Stevie Ray Vaughan",
         "url": "https://open.spotify.com/artist/5fsDcuclIe8ZiBD5P787K1",
         "image": "https://i.scdn.co/image/1de60c936683320769a1bfb6fba7f75902859085"
+    },
+    {
+        "name": "Ramones",
+        "url": "https://open.spotify.com/artist/1co4F2pPNH8JjTutZkmgSm",
+        "image": "https://i.scdn.co/image/ab6761610000e5eb5b9f46a5c5bf8243179d56b0"
     }
 ]
