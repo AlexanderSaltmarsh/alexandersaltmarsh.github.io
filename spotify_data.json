@@ -1,13 +1,13 @@
 [
     {
-        "name": "Queen",
-        "url": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d",
-        "image": "https://i.scdn.co/image/ab6772690000c46c47488c35a509d42072c23976"
-    },
-    {
         "name": "Social Distortion",
         "url": "https://open.spotify.com/artist/16nn7kCHPWIB6uK09GQCNI",
         "image": "https://i.scdn.co/image/ab6761610000e5ebd3870d0ed0f0453fefa2f975"
+    },
+    {
+        "name": "Queen",
+        "url": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d",
+        "image": "https://i.scdn.co/image/ab6772690000c46c47488c35a509d42072c23976"
     },
     {
         "name": "C418",
