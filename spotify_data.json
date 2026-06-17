@@ -5,13 +5,13 @@
         "image": "https://i.scdn.co/image/ab6761610000e5ebd3870d0ed0f0453fefa2f975"
     },
     {
-        "name": "Warren Zevon",
-        "url": "https://open.spotify.com/artist/3mY9Ii0cL5SQxpOTAm8SHx",
-        "image": "https://i.scdn.co/image/ab6761610000e5ebcb844c45233a84f9f81c9ec4"
-    },
-    {
         "name": "C418",
         "url": "https://open.spotify.com/artist/4uFZsG1vXrPcvnZ4iSQyrx",
         "image": "https://i.scdn.co/image/ab6761610000e5eba9b8234e3071836212561d19"
+    },
+    {
+        "name": "Ramones",
+        "url": "https://open.spotify.com/artist/1co4F2pPNH8JjTutZkmgSm",
+        "image": "https://i.scdn.co/image/ab6761610000e5eb5b9f46a5c5bf8243179d56b0"
     }
 ]
