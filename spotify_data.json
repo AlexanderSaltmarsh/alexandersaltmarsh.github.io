@@ -1,13 +1,13 @@
 [
     {
-        "name": "C418",
-        "url": "https://open.spotify.com/artist/4uFZsG1vXrPcvnZ4iSQyrx",
-        "image": "https://i.scdn.co/image/ab6761610000e5eba9b8234e3071836212561d19"
-    },
-    {
         "name": "Social Distortion",
         "url": "https://open.spotify.com/artist/16nn7kCHPWIB6uK09GQCNI",
         "image": "https://i.scdn.co/image/ab6761610000e5ebd3870d0ed0f0453fefa2f975"
+    },
+    {
+        "name": "C418",
+        "url": "https://open.spotify.com/artist/4uFZsG1vXrPcvnZ4iSQyrx",
+        "image": "https://i.scdn.co/image/ab6761610000e5eba9b8234e3071836212561d19"
     },
     {
         "name": "Warren Zevon",
