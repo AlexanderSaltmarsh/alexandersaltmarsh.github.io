@@ -1,13 +1,13 @@
 [
     {
+        "name": "Gorillaz",
+        "url": "https://open.spotify.com/artist/3AA28KZvwAUcZuOKwyblJQ",
+        "image": "https://i.scdn.co/image/ab6761610000e5ebdd5b57b40cf2aaeccd07835e"
+    },
+    {
         "name": "U2",
         "url": "https://open.spotify.com/artist/51Blml2LZPmy7TTiAg47vQ",
         "image": "https://i.scdn.co/image/ab6761610000e5ebba9faec141011cab24faccf5"
-    },
-    {
-        "name": "Social Distortion",
-        "url": "https://open.spotify.com/artist/16nn7kCHPWIB6uK09GQCNI",
-        "image": "https://i.scdn.co/image/ab6761610000e5ebd3870d0ed0f0453fefa2f975"
     },
     {
         "name": "Ramones",
