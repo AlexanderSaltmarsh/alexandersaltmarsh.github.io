@@ -5,13 +5,13 @@
         "image": "https://i.scdn.co/image/ab6761610000e5ebdd5b57b40cf2aaeccd07835e"
     },
     {
+        "name": "Los Lobos",
+        "url": "https://open.spotify.com/artist/6OWapcJm9xd55ci9CYbAuT",
+        "image": "https://i.scdn.co/image/ab6761610000e5ebac4404f853105ca0ae098306"
+    },
+    {
         "name": "U2",
         "url": "https://open.spotify.com/artist/51Blml2LZPmy7TTiAg47vQ",
         "image": "https://i.scdn.co/image/ab6761610000e5ebba9faec141011cab24faccf5"
-    },
-    {
-        "name": "Ramones",
-        "url": "https://open.spotify.com/artist/1co4F2pPNH8JjTutZkmgSm",
-        "image": "https://i.scdn.co/image/ab6761610000e5eb5b9f46a5c5bf8243179d56b0"
     }
 ]
