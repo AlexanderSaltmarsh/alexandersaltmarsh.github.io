@@ -1,13 +1,13 @@
 [
     {
-        "name": "Gorillaz",
-        "url": "https://open.spotify.com/artist/3AA28KZvwAUcZuOKwyblJQ",
-        "image": "https://i.scdn.co/image/ab6761610000e5ebdd5b57b40cf2aaeccd07835e"
-    },
-    {
         "name": "Los Lobos",
         "url": "https://open.spotify.com/artist/6OWapcJm9xd55ci9CYbAuT",
         "image": "https://i.scdn.co/image/ab6761610000e5ebac4404f853105ca0ae098306"
+    },
+    {
+        "name": "Gorillaz",
+        "url": "https://open.spotify.com/artist/3AA28KZvwAUcZuOKwyblJQ",
+        "image": "https://i.scdn.co/image/ab6761610000e5ebdd5b57b40cf2aaeccd07835e"
     },
     {
         "name": "U2",
