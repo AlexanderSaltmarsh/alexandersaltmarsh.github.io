@@ -5,13 +5,13 @@
         "image": "https://i.scdn.co/image/ab6761610000e5ebba9faec141011cab24faccf5"
     },
     {
-        "name": "Green Day",
-        "url": "https://open.spotify.com/artist/7oPftvlwr6VrsViSDV7fJY",
-        "image": "https://i.scdn.co/image/ab6761610000e5eb6ff0cd5ef2ecf733804984bb"
-    },
-    {
         "name": "Warren Zevon",
         "url": "https://open.spotify.com/artist/3mY9Ii0cL5SQxpOTAm8SHx",
         "image": "https://i.scdn.co/image/ab6761610000e5ebcb844c45233a84f9f81c9ec4"
+    },
+    {
+        "name": "Green Day",
+        "url": "https://open.spotify.com/artist/7oPftvlwr6VrsViSDV7fJY",
+        "image": "https://i.scdn.co/image/ab6761610000e5eb6ff0cd5ef2ecf733804984bb"
     }
 ]
